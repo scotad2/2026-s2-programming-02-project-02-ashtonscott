@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "The Battle of Hastings was fought in which year?",
+      "correct_answer": "1066",
+      "incorrect_answers": [
+        "911",
+        "1204",
+        "1420"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "In the year 1900, what were the most popular first names given to boy and girl babies born in the United States?",
+      "correct_answer": "John and Mary",
+      "incorrect_answers": [
+        "Joseph and Catherine",
+        "William and Elizabeth",
+        "George and Anne"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "Which day did World War I begin?",
+      "correct_answer": "July 28",
+      "incorrect_answers": [
+        "January 28",
+        "June 28",
+        "April 28"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "Spain was formed in 1469 with the marriage of Isabella I of Castile and Ferdinand II of what other Iberian kingdom?",
+      "correct_answer": "Aragon",
+      "incorrect_answers": [
+        "Galicia",
+        "Le&oacute;n",
+        "Navarre"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "When did Lithuania declare independence from the Soviet Union?",
+      "correct_answer": "March 11th, 1990",
+      "incorrect_answers": [
+        "December 25th, 1991",
+        "December 5th, 1991",
+        "April 20th, 1989"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "What was the name of the spy ring that helped the United States win the Revolutionary War?",
+      "correct_answer": "Culper Ring",
+      "incorrect_answers": [
+        "New York Spy Ring",
+        "Washington&#039;s Spies",
+        "Unnamed"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "What did Albert Einstein win the Nobel Prize for in 1921?",
+      "correct_answer": "Photoelectric Effect",
+      "incorrect_answers": [
+        "Relativity",
+        "Wave-Particle Duality",
+        "Zero-Point Energy"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "When was the &quot;Siege of Leningrad&quot; lifted during World War II?",
+      "correct_answer": "January 1944",
+      "incorrect_answers": [
+        "September 1943",
+        "November 1943",
+        "March 1944"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "Toussaint Louverture led a successful slave revolt in which country?",
+      "correct_answer": "Haiti",
+      "incorrect_answers": [
+        "France",
+        "Cuba",
+        "United States"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "When did Spanish Peninsular War start?",
+      "correct_answer": "1808",
+      "incorrect_answers": [
+        "1806",
+        "1810",
+        "1809"
+      ]
+    }
+]

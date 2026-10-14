@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "In what year was Avril Lavigne&rsquo;s first studio album, &ldquo;Let Go&rdquo;, released?",
+      "correct_answer": "2002",
+      "incorrect_answers": [
+        "2001",
+        "2004",
+        "2005"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Where does the Mac part of the name Fleetwood Mac come from?",
+      "correct_answer": "John McVie",
+      "incorrect_answers": [
+        "Christine McVie",
+        "Mac McAnally",
+        "David Tennant"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Who was &quot;Kung Fu Fighting&quot; in 1974?",
+      "correct_answer": "Carl Douglas",
+      "incorrect_answers": [
+        "The Bee Gees",
+        "Heatwave",
+        "Kool &amp; the Gang"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Kanye West&#039;s &quot;Gold Digger&quot; featured which Oscar-winning actor?",
+      "correct_answer": "Jamie Foxx",
+      "incorrect_answers": [
+        "Alec Baldwin",
+        "Dwayne Johnson",
+        " Bruce Willis"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "What is the real name of American rapper Eminem, also known as Slim Shady?",
+      "correct_answer": "Marshall Mathers",
+      "incorrect_answers": [
+        "Calvin Broadus",
+        "Shawn Carter",
+        "Nasir Jones"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "What is the name of Rivers Cuomo&#039;s wife?",
+      "correct_answer": "Kyoko Ito",
+      "incorrect_answers": [
+        "Yoko Ono",
+        "Kyary Pamyu Pamyu",
+        "LiSA"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Which of these is NOT the name of an album released by English singer-songwriter Adele?",
+      "correct_answer": "12",
+      "incorrect_answers": [
+        "19",
+        "21",
+        "25"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "What was Rage Against the Machine&#039;s debut album?",
+      "correct_answer": "Rage Against the Machine",
+      "incorrect_answers": [
+        "Evil Empire",
+        "Bombtrack",
+        "The Battle Of Los Angeles"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Which song on Daft Punk&#039;s &quot;Random Access Memories&quot; features Pharrell Williams?",
+      "correct_answer": "Get Lucky",
+      "incorrect_answers": [
+        "Doin&#039; It Right",
+        "Instant Crush",
+        "The Game of Love"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Which brass instrument has the lowest pitch in an orchestra?",
+      "correct_answer": "Tuba",
+      "incorrect_answers": [
+        "Trumpet",
+        "Saxophone",
+        "Trombone"
+      ]
+    }
+  ]

@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "What is the name of the 2016 mixtape released by Venezuelan electronic producer Arca?",
+      "correct_answer": "Entra&ntilde;as",
+      "incorrect_answers": [
+        "&amp;&amp;&amp;&amp;&amp;&amp;",
+        "Sheep",
+        "Xen"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "In the Panic! At the Disco&#039;s song &quot;Nothern Downpour&quot;, which lyric follows &#039;I know the world&#039;s a broken bone&#039;.",
+      "correct_answer": "&quot;So melt your headaches call it home&quot;",
+      "incorrect_answers": [
+        "&quot;So sing your song until you&#039;re home&quot;",
+        "&quot;So let them know they&#039;re on their own&quot;",
+        "&quot;So start a fire in their cold stone&quot;"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "Which of these is Daft Punk&#039;s debut single?",
+      "correct_answer": "The New Wave",
+      "incorrect_answers": [
+        "Da Funk",
+        "Discovery",
+        "Around the World"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "Electronic artists Boys Noize and Skrillex have collaborated and released tracks under what name?",
+      "correct_answer": "Dog Blood",
+      "incorrect_answers": [
+        "Jack &Uuml;",
+        "What So Not",
+        "Noisia"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "Which of Michael Jackson&#039;s albums sold the most copies?",
+      "correct_answer": "Thriller",
+      "incorrect_answers": [
+        "Dangerous",
+        "Bad",
+        "Off the Wall"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "Which Manchester nightclub was considered central to the &#039;Madchester&#039; music scene in the late 80&#039;s?",
+      "correct_answer": "The Ha&ccedil;ienda",
+      "incorrect_answers": [
+        "The Warehouse Project",
+        "LIV",
+        "The Liar&#039;s Club"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "Who won the 1989 Drum Corps International championships?",
+      "correct_answer": "Santa Clara Vanguard",
+      "incorrect_answers": [
+        "Blue Devils",
+        "The Academy",
+        "The Bluecoats"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "When did the rapper Eazy-E die?",
+      "correct_answer": "March 26, 1995",
+      "incorrect_answers": [
+        "July 11, 1992",
+        "February 14, 1993",
+        "October 21, 1994"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "Where was Nicki Minaj born?",
+      "correct_answer": "Trinidad and Tobago",
+      "incorrect_answers": [
+        "Haiti",
+        "Saint Lucia",
+        "Grenada"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "What year was Huun Huur Tu&#039;s album Altai Sayan Tandy-Uula released? ",
+      "correct_answer": "2004",
+      "incorrect_answers": [
+        "1993",
+        "2006",
+        "2010"
+      ]
+    }
+  ]

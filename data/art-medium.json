@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which one of these colors are not featured in Mondrian&#039;s Broadway Boogie-Woogie?",
+      "correct_answer": "Green",
+      "incorrect_answers": [
+        "Blue",
+        "Yellow",
+        "Red"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Who designed the Chupa Chups logo?",
+      "correct_answer": "Salvador Dali",
+      "incorrect_answers": [
+        "Pablo Picasso",
+        "Andy Warhol",
+        "Vincent van Gogh"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "What were Marcel Duchamp&#039;s readymades?",
+      "correct_answer": "utilitarian objects elevated to the status of art",
+      "incorrect_answers": [
+        "a series focused on color and light as opposed to line and shape",
+        "paintings with a barely visible outlined square",
+        "a group of identical steel boxes jutting from the wall "
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which Greek sculptor designed the Athena Parthenos statue inside the Parthenon?",
+      "correct_answer": "Phidias",
+      "incorrect_answers": [
+        "Scopas",
+        "Hesiod",
+        "Praxiteles"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which of these paintings did Johannes Vermeer not paint?",
+      "correct_answer": "Bacchus",
+      "incorrect_answers": [
+        "Girl with a Pearl Earring",
+        "The Milkmaid",
+        "The Lacemaker"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which artist painted &ldquo;The Treachery of Images,&rdquo; a painting of a pipe with the description &quot;this is not a pipe&quot;?",
+      "correct_answer": "Magritte",
+      "incorrect_answers": [
+        "Matisse",
+        "Modigliani",
+        "Munch "
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "In &quot;Last Supper&quot; by Leonardo Da Vinci, what two colors were the robes worn by Jesus?",
+      "correct_answer": "Red and Blue",
+      "incorrect_answers": [
+        "Red and White",
+        "Red and Yellow",
+        "Red and Black"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which time signature is commonly known as &ldquo;Cut Time?&rdquo;",
+      "correct_answer": "2/2",
+      "incorrect_answers": [
+        "4/4",
+        "6/8",
+        "3/4"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Which one of these paintings is not by Caspar David Friedrich?",
+      "correct_answer": "The Black Sea",
+      "incorrect_answers": [
+        "The Sea of Ice",
+        "Wanderer above the Sea of Fog",
+        "The Monk by the Sea"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Art",
+      "question": "Who painted the painting &quot;Nighthawks&quot;?",
+      "correct_answer": "Edward Hopper",
+      "incorrect_answers": [
+        "Johannes Vermeer",
+        "Vincent van Gogh",
+        "Salvador Dali"
+      ]
+    }
+  ]

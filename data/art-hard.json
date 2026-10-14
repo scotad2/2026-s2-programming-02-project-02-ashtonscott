@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "How many paint and pastel versions of &quot;The Scream&quot; is Norwegian painter Edvard Munch believed to have produced?",
+      "correct_answer": "4",
+      "incorrect_answers": [
+        "1",
+        "3",
+        "2"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "Paul Gauguin moved to which country in 1895?",
+      "correct_answer": "Tahiti",
+      "incorrect_answers": [
+        "France",
+        "Atuona",
+        "Lithuania"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What nationality was the famous artist Van Gogh?",
+      "correct_answer": "Dutch",
+      "incorrect_answers": [
+        "French",
+        "Russian",
+        "Polish"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What year did Albrecht D&uuml;rer create the painting &quot;The Young Hare&quot;?",
+      "correct_answer": "1502",
+      "incorrect_answers": [
+        "1702",
+        "1402",
+        "1602"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What French sculptor designed the Statue of Liberty? ",
+      "correct_answer": "Fr&eacute;d&eacute;ric Auguste Bartholdi",
+      "incorrect_answers": [
+        "Jean-L&eacute;on G&eacute;r&ocirc;me",
+        "Auguste Rodin",
+        "Henri Matisse"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What was the first successful and commercially viable photographic technique?",
+      "correct_answer": "The Daguerreotype",
+      "incorrect_answers": [
+        "Collodion process",
+        "The Turin Shroud",
+        "Kodachrome film"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What was the major distinction between the English and French Gothic styles of architecture?",
+      "correct_answer": "Fan vaulting",
+      "incorrect_answers": [
+        "Pinnacles",
+        "Gargoyles",
+        "Hemispherical Domes"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "Painter Piet Mondrian (1872 - 1944) was a part of what movement?",
+      "correct_answer": "Neoplasticism",
+      "incorrect_answers": [
+        "Precisionism",
+        "Cubism",
+        "Impressionism"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What nationality was the famous artist Pablo Picasso?",
+      "correct_answer": "Spanish",
+      "incorrect_answers": [
+        "French",
+        "Italian",
+        "German"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "Which art movement was Pablo Picasso known for co-founding?",
+      "correct_answer": "Cubism",
+      "incorrect_answers": [
+        "Futurism",
+        "Expressionism",
+        "Impressionism"
+      ]
+    }
+  ]

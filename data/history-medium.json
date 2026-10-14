@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "What was the name of one of the surviving palaces of Henry VIII located near Richmond, London?",
+      "correct_answer": "Hampton Court",
+      "incorrect_answers": [
+        "St James&#039;s Palace",
+        "Buckingham Palace",
+        "Coughton Court"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Who led France during the &quot;Reign of Terror&quot; ?",
+      "correct_answer": "Maximilien Robespierre",
+      "incorrect_answers": [
+        "Napoleon Bonaparte",
+        "Jean-Paul Marat",
+        "Louis XVI"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "What was the unofficial name for Germany between 1919 and 1933?",
+      "correct_answer": "Weimar Republic",
+      "incorrect_answers": [
+        "German Democratic Republic",
+        "Federal Republic of Germany",
+        "Oesterreich "
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Which of these 1900s tanks were designed and built BEFORE the others?",
+      "correct_answer": "Renault FT",
+      "incorrect_answers": [
+        "M4 Sherman",
+        " Panzer IV",
+        "Cromwell "
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "What is the name of the famous Apache leader who died in 1909 at the age of 70?",
+      "correct_answer": "Geronimo",
+      "incorrect_answers": [
+        "Sitting Bull",
+        "Red Cloud",
+        "Crazy Horse"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": " What Russian automatic gas-operated assault rifle was developed in the Soviet Union in 1947, and is still popularly used today?",
+      "correct_answer": "AK-47",
+      "incorrect_answers": [
+        "RPK",
+        "M16",
+        "MG 42"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "The seed drill was invented by which British inventor?",
+      "correct_answer": "Jethro Tull",
+      "incorrect_answers": [
+        "Charles Babbage",
+        "Isaac Newton",
+        "J.J Thomson"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Who tutored Alexander the Great?",
+      "correct_answer": "Aristotle",
+      "incorrect_answers": [
+        "Socrates",
+        "Plato",
+        "King Philip"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Which Nation did NOT have a Colony in modern-day North America?",
+      "correct_answer": "Portugal",
+      "incorrect_answers": [
+        "Spain",
+        "Sweden",
+        "Netherlands"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Which of the following Assyrian kings did NOT rule during the Neo-Assyrian Empire?",
+      "correct_answer": "Shamshi-Adad III",
+      "incorrect_answers": [
+        "Shalmaneser V",
+        "Esharhaddon",
+        "Ashur-nasir-pal II"
+      ]
+    }
+  ]

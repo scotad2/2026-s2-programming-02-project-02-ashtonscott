@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "The Proclaimers - I&#039;m Gonna Be (500 Miles) reached what position on the US Hot 100 Charts in 1993?",
+      "correct_answer": "3rd",
+      "incorrect_answers": [
+        "8th",
+        "1st",
+        "5th"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which of these languages was NOT included in the 2016 song &quot;Don&#039;t Mind&quot; by Kent Jones?",
+      "correct_answer": "Portuguese",
+      "incorrect_answers": [
+        "Japanese",
+        "French",
+        "Spanish"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "La Fenice opera house is in which Italian city?",
+      "correct_answer": "Venice",
+      "incorrect_answers": [
+        "Milan",
+        "Rome",
+        "Pompeii"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "What album did Gorillaz release in 2017?",
+      "correct_answer": "Humanz",
+      "incorrect_answers": [
+        "Plastic Beach",
+        "The Fall",
+        "Demon Days"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "What was the title of Sakamoto Kyu&#039;s song &quot;Ue o Muite Arukou&quot; (I Look Up As I Walk) changed to in the United States?",
+      "correct_answer": "Sukiyaki",
+      "incorrect_answers": [
+        "Takoyaki",
+        "Sushi",
+        "Oden"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "What is Fergie&#039;s debut album called?",
+      "correct_answer": "The Dutchess",
+      "incorrect_answers": [
+        "Fergalicious ",
+        "The Sweet Escape",
+        "Loose"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "&quot;The Genius&quot; is the original and secondary name of which Wu-Tang Clan member?",
+      "correct_answer": "GZA",
+      "incorrect_answers": [
+        "Ghostface Killah",
+        "Ol&#039; Dirty Bastard",
+        "Raekwon the Chef"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "&quot;Make You Feel My Love&quot; was originally written and performed by which singer-songwriter?",
+      "correct_answer": "Bob Dylan",
+      "incorrect_answers": [
+        "Elvis",
+        "Adele",
+        "Billy Joel"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "What year was Weezer&#039;s album &quot;Pinkerton&quot; released? ",
+      "correct_answer": "1996",
+      "incorrect_answers": [
+        "1990",
+        "2001",
+        "1994"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which of these black metal acts was a solo project?",
+      "correct_answer": "Burzum",
+      "incorrect_answers": [
+        "Darkthrone",
+        "Mayhem",
+        "Dissection"
+      ]
+    }
+  ]

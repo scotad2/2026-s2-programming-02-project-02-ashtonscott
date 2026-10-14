@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "In 2013 how much money was lost by Nigerian scams?",
+      "correct_answer": "$12.7 Billion",
+      "incorrect_answers": [
+        "$95 Million",
+        "$956 Million",
+        "$2.7 Billion"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "What is the romanized Russian word for &quot;winter&quot;?",
+      "correct_answer": "Zima",
+      "incorrect_answers": [
+        "Leto",
+        "Vesna",
+        "Osen&#039;"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "Which item of clothing is usually worn by a Scotsman at a wedding?",
+      "correct_answer": "Kilt",
+      "incorrect_answers": [
+        "Skirt",
+        "Dress",
+        "Rhobes"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "What is the full title of the Prime Minister of the UK?",
+      "correct_answer": "First Lord of the Treasury",
+      "incorrect_answers": [
+        "Duke of Cambridge",
+        "Her Majesty&#039;s Loyal Opposition",
+        "Manager of the Crown Estate"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "What is a Burgee?",
+      "correct_answer": "A flag",
+      "incorrect_answers": [
+        "A rope",
+        "A window",
+        "A type of food"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "What nation produces roughly 40% of the world&rsquo;s vanilla?",
+      "correct_answer": "Madagascar",
+      "incorrect_answers": [
+        "Indonesia",
+        "China",
+        "Mexico"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "What is the romanized Japanese word for &quot;university&quot;?",
+      "correct_answer": "Daigaku",
+      "incorrect_answers": [
+        "Toshokan",
+        "Jimusho",
+        "Shokudou"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "The lesser-known continuation of the saying &quot;Curiosity killed the cat...&quot; is:",
+      "correct_answer": "&quot;...but satisfaction brought it back.&quot;",
+      "incorrect_answers": [
+        "&quot;...and the silent mouse remained thereat.&quot;",
+        "&quot;...which taught it not to do that.&quot;",
+        "&quot;...but death by the truth is better than ignorance.&quot;"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "Amsterdam Centraal station is twinned with what station?",
+      "correct_answer": "London Liverpool Street",
+      "incorrect_answers": [
+        "Frankfurt (Main) Hauptbahnhof",
+        "Paris Gare du Nord",
+        "Brussels Midi"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "Earl Grey tea is black tea flavoured with what?",
+      "correct_answer": "Bergamot oil",
+      "incorrect_answers": [
+        "Lavender",
+        "Vanilla",
+        "Honey"
+      ]
+    }
+  ]

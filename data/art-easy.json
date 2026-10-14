@@ -1,0 +1,122 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "What is a fundamental element of the Gothic style of architecture?",
+      "correct_answer": "pointed arch",
+      "incorrect_answers": [
+        "coffered ceilings",
+        "fa&ccedil;ades surmounted by a pediment ",
+        "internal frescoes"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Who painted &quot;The Starry Night&quot;?",
+      "correct_answer": "Vincent van Gogh",
+      "incorrect_answers": [
+        "Edvard Munch",
+        "Pablo Picasso",
+        "Claude Monet"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Who painted the biblical fresco The Creation of Adam?",
+      "correct_answer": "Michelangelo",
+      "incorrect_answers": [
+        "Leonardo da Vinci",
+        "Caravaggio",
+        "Rembrandt"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Which artist painted the late 15th century mural &#039;The Last Supper&#039;?",
+      "correct_answer": "Leonardo da Vinci",
+      "incorrect_answers": [
+        "Piero della Francesca",
+        "Paolo Uccello",
+        "Luca Pacioli"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Which artist is famous for cutting off his ear?",
+      "correct_answer": "Vincent van Gogh",
+      "incorrect_answers": [
+        "Salvador Dali",
+        "Rembrandt",
+        "Michelangelo"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "What is another name for La Gioconda / La Joconde?",
+      "correct_answer": "The Mona Lisa",
+      "incorrect_answers": [
+        "The Girl with a Pearl Earring",
+        "The Starry Night",
+        "Sunflowers"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Who sculpted the statue of David?",
+      "correct_answer": "Michelangelo",
+      "incorrect_answers": [
+        "Gian Lorenzo Bernini",
+        "Auguste Rodin",
+        "Donatello"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Which painting was not made by Vincent Van Gogh?",
+      "correct_answer": "The Ninth Wave",
+      "incorrect_answers": [
+        "Caf&eacute; Terrace at Night",
+        "Bedroom In Arles",
+        "Starry Night"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "What is the name of the Japanese art of folding paper into decorative shapes and figures?",
+      "correct_answer": "Origami",
+      "incorrect_answers": [
+        "Sumi-e",
+        "Ukiyo-e",
+        "Haiku"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Who painted the Mona Lisa?",
+      "correct_answer": "Leonardo da Vinci",
+      "incorrect_answers": [
+        "Pablo Picasso",
+        "Claude Monet",
+        "Vincent van Gogh"
+      ]
+    }
+  ]

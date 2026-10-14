@@ -1,0 +1,82 @@
+[
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of the following pitchers was named National League Rookie of the Year for the 2013 season?",
+      "correct_answer": "Jose Fernandez",
+      "incorrect_answers": [ "Jacob deGrom", "Shelby Miller", "Matt Harvey" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which darts player has won the most World Championship titles?",
+      "correct_answer": "Phil Taylor",
+      "incorrect_answers": [ "Michael van Gerwen", "Raymond van Barneveld", "Eric Bristow" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of these English football clubs is based in Liverpool?",
+      "correct_answer": "Everton",
+      "incorrect_answers": [ "West Ham United", "Crystal Palace", "Arsenal" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "In Formula 1, the Virtual Safety Car was introduced following the fatal crash of which driver?",
+      "correct_answer": "Jules Bianchi",
+      "incorrect_answers": [ "Ayrton Senna", "Ronald Ratzenberger", "Gilles Villeneuve" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "How many games did Arsenal FC go unbeaten during the 2003-2004 season of the English Premier League",
+      "correct_answer": "38",
+      "incorrect_answers": [ "51", "49", "22" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "In 2016, who won the Formula 1 World Constructor&#039;s Championship for the third time in a row?",
+      "correct_answer": "Mercedes-AMG Petronas",
+      "incorrect_answers": [ "Scuderia Ferrari", "McLaren Honda", "Red Bull Racing Renault" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "In what sport does Fanny Chmelar compete for Germany?",
+      "correct_answer": "Skiing",
+      "incorrect_answers": [ "Swimming", "Showjumping", "Gymnastics" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Who won NFL Super Bowl LI? (51)",
+      "correct_answer": "Patriots",
+      "incorrect_answers": [ "Falcons", "Broncos", "Eagles" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which car manufacturer won the 2016 24 Hours of Le Mans?",
+      "correct_answer": "Porsche",
+      "incorrect_answers": [ "Toyota", "Audi", "Ferrari" ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which team was the 2015-2016 NBA Champions?",
+      "correct_answer": "Cleveland Cavaliers",
+      "incorrect_answers": [ "Golden State Warriors", "Toronto Raptors", "Oklahoma City Thunders" ]
+    }
+  ]
