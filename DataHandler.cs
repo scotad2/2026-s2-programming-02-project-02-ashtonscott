@@ -13,6 +13,8 @@ namespace WinFormsApp1
     /// </summary>
     public static class DataHandler
     {
+        public const string QuestionPath = @"../../../data/all-questions.json";
+
         /// <summary>
         /// Reads the JSON file and decodes any HTML entities (e.g. &amp;quot;) in the text.
         /// </summary>
