@@ -23,5 +23,25 @@
 
         /// <summary>What the player has won so far.</summary>
         public int Score => Level == 0 ? 0 : Prizes[Level - 1];
+
+        /// <summary>The question difficulty for the current level.</summary>
+        public string Difficulty
+        {
+            get
+            {
+                if (Level < 5)
+                {
+                    return "easy";
+                }
+                else if (Level < 10)
+                {
+                    return "medium";
+                }
+                else
+                {
+                    return "hard";
+                }
+            }
+        }
     }
 }
