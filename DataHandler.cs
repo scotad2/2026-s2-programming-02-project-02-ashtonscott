@@ -18,15 +18,19 @@ namespace WinFormsApp1
         public static List<Question> LoadQuestions(string filePath)
         {
             string json = File.ReadAllText(filePath);
-            List<Question> questions = JsonSerializer.Deserialize<List<Question>>(json) ?? new List<Question>();
+            List<Question> questions = JsonSerializer.Deserialize<List<Question>>(json);
+
+            // Check that the questions file isn't empty (null)
+            if (questions == null)
+            {
+                throw new Exception("The questions file is empty.");
+            }
 
             foreach (Question question in questions)
             {
                 question.Text = WebUtility.HtmlDecode(question.Text);
                 question.CorrectAnswer = WebUtility.HtmlDecode(question.CorrectAnswer);
-                question.IncorrectAnswers = question.IncorrectAnswers
-                    .Select(answer => WebUtility.HtmlDecode(answer).Trim())
-                    .ToList();
+                question.IncorrectAnswers = question.IncorrectAnswers.Select(answer => WebUtility.HtmlDecode(answer).Trim()).ToList();
             }
 
             return questions;
