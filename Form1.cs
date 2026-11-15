@@ -53,16 +53,28 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Fills the money tree list once, then starts the first game once the form is on screen.
+        /// Fills the money tree list, then starts the first game once the form is on screen.
         /// </summary>
         private void Form1_Shown(object? sender, EventArgs e)
         {
-            // The list shows the highest prize at the top, so count down from the last level.
-            for (int i = _moneyTree.LevelCount - 1; i >= 0; i--)
-            {
-                bool isBank = i == 4 || i == 9;
-                moneyTreeList.Items.Add($"{i + 1,2}   ${_moneyTree.GetPrize(i):N0}{(isBank ? "  (bank)" : "")}");
-            }
+            moneyTreeList.Items.AddRange(
+            [
+                "15.   $1,000,000",
+                "14.   $500,000",
+                "13.   $250,000",
+                "12.   $125,000",
+                "11.   $64,000",
+                "10.   $32,000  (bank)",
+                " 9.   $16,000",
+                " 8.   $8,000",
+                " 7.   $4,000",
+                " 6.   $2,000",
+                " 5.   $1,000  (bank)",
+                " 4.   $500",
+                " 3.   $300",
+                " 2.   $200",
+                " 1.   $100"
+            ]);
 
             playerLabel.Text = $"Player: {_player.Name}";
             StartGame();

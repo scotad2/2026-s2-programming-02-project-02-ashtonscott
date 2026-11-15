@@ -68,7 +68,7 @@
                 }
                 else if (Level >= 5)
                 {
-                    return 5000;
+                    return 1000;
                 }
                 else
                 {
@@ -79,13 +79,6 @@
 
         /// <summary>True at levels 1, 6 and 11, when the player picks a category.</summary>
         public bool IsStageStart => Level % 5 == 0;
-
-        /// <summary>Gets the prize for any level (used to fill the money tree list).</summary>
-        /// <param name="level">The level, starting at 0.</param>
-        public int GetPrize(int level)
-        {
-            return Prizes[level];
-        }
 
         /// <summary>Moves up one level.</summary>
         public void Advance()
