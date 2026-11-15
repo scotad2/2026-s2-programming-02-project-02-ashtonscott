@@ -212,9 +212,6 @@ namespace WinFormsApp1
             }
         }
 
-        /// <summary>
-        /// Lets the player leave with the money they have won so far.
-        /// </summary>
         private void WalkAwayButton_Click(object? sender, EventArgs e)
         {
             // Just in case the player ever decides to walk away after having done nothing...
@@ -222,6 +219,7 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Well that was a waste of time...", "Why did you do that?", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 EndGame(_moneyTree.Score);
+                return;
             }
 
             // End game and display score.
