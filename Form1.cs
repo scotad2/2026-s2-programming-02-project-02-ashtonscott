@@ -17,7 +17,7 @@ namespace WinFormsApp1
         };
 
         /// <summary>The player taking part in the game.</summary>
-        private readonly Player _player = new("Ashton", 21, new List<string> { "Programming" }, "Student");
+        private readonly Player _player = new("Ashton", 19, ["Programming"], "Student");
 
         /// <summary>Tracks the player's level, prizes and difficulty.</summary>
         private readonly MoneyTree _moneyTree = new();
@@ -29,16 +29,16 @@ namespace WinFormsApp1
         private readonly Button[] _answerButtons;
 
         /// <summary>The categories the player has not chosen yet in this game.</summary>
-        private List<string> _availableCategories = new();
+        private List<string> _availableCategories = [];
 
         /// <summary>The questions that have not been asked yet.</summary>
-        private QuestionBank _questionBank = null!;
+        private QuestionBank _questionBank;
 
         /// <summary>The question currently on screen.</summary>
-        private Question _currentQuestion = null!;
+        private Question _currentQuestion;
 
         /// <summary>The category chosen for the current stage.</summary>
-        private string _currentCategory = "";
+        private string _currentCategory;
 
         /// <summary>Whether the player's last answer was correct.</summary>
         private bool _answeredCorrectly;
@@ -55,7 +55,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Fills the money tree list, then starts the first game once the form is on screen.
         /// </summary>
-        private void Form1_Shown(object? sender, EventArgs e)
+        private void Form1_Shown(object sender, EventArgs e)
         {
             moneyTreeList.Items.AddRange(
             [
@@ -175,20 +175,20 @@ namespace WinFormsApp1
         /// <summary>
         /// Handles a click on any answer button: shows green/red, then waits for the Continue button.
         /// </summary>
-        private void AnswerButton_Click(object? sender, EventArgs e)
+        private void AnswerButton_Click(object sender, EventArgs e)
         {
             Button clicked = (Button)sender!;
             Button correctButton = _answerButtons.First(button => button.Text == _currentQuestion.CorrectAnswer);
             _answeredCorrectly = clicked == correctButton;
 
-            // The correct answer always turns green; a wrong choice turns red.
+            // The correct answer always turns green and a wrong choice turns red.
             correctButton.BackColor = Color.LightGreen;
             if (!_answeredCorrectly)
             {
                 clicked.BackColor = Color.Red;
             }
 
-            // Disabled buttons can't be clicked, so the player can't answer twice.
+            // Disabled buttons can't be clicked so the player can't answer twice.
             foreach (Button button in _answerButtons)
             {
                 button.Enabled = false;
@@ -199,9 +199,9 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Moves on after an answer: ends the game if it was wrong or the last level, otherwise goes up a level.
+        /// Moves on after an answer and ends the game if it was wrong or the last level, otherwise goes up a level.
         /// </summary>
-        private void ContinueButton_Click(object? sender, EventArgs e)
+        private void ContinueButton_Click(object sender, EventArgs e)
         {
             continueButton.Visible = false;
 
@@ -222,7 +222,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void WalkAwayButton_Click(object? sender, EventArgs e)
+        private void WalkAwayButton_Click(object sender, EventArgs e)
         {
             // Just in case the player ever decides to walk away after having done nothing...
             if (_moneyTree.Score == 0)
@@ -237,7 +237,7 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Shows the game over form, then either starts a new game or closes the app.
+        /// Shows the game over form then either starts a new game or closes the app.
         /// </summary>
         /// <param name="finalScore">The amount the player leaves with.</param>
         private void EndGame(int finalScore)
@@ -256,11 +256,18 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Stops the player clicking a different row, so the highlight always shows the current level.
+        /// Stops the player clicking a different row so the highlight on the money tree always shows the current level.
         /// </summary>
-        private void MoneyTree_SelectedIndexChanged(object? sender, EventArgs e)
+        private void MoneyTree_SelectedIndexChanged(object sender, EventArgs e)
         {
-            moneyTreeList.SelectedIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
+            int correctIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
+
+            // Determine when the player tries to tamper with my money tree.
+            if (moneyTreeList.SelectedIndex != correctIndex)
+            {
+                MessageBox.Show("Don't touch my damn money tree!\n>:(", "Stop!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                moneyTreeList.SelectedIndex = correctIndex;
+            }
         }
     }
 }
