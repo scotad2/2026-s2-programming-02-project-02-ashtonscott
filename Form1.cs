@@ -49,7 +49,7 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
-            _answerButtons = new[] { answerAButton, answerBButton, answerCButton, answerDButton };
+            _answerButtons = [answerAButton, answerBButton, answerCButton, answerDButton];
         }
 
         /// <summary>
