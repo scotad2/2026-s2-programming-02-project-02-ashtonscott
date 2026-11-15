@@ -16,8 +16,10 @@ namespace WinFormsApp1
         /// <summary>
         /// Reads the JSON file and decodes any HTML entities (e.g. &amp;quot;) in the text.
         /// </summary>
-        /// <param name="filePath">Path to the JSON file.</param>
         /// <returns>All questions in the file.</returns>
+        /// <exception cref="FileNotFoundException">Thrown if the questions file does not exist.</exception>
+        /// <exception cref="JsonException">Thrown if the questions file is not valid JSON.</exception>
+        /// <exception cref="Exception">Thrown if the questions file is empty.</exception>
         public static List<Question> LoadQuestions()
         {
             // Check the file exists before trying to read it.
