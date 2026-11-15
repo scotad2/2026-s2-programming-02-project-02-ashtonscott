@@ -8,8 +8,21 @@
         /// <summary>Prize for each level, lowest first.</summary>
         private static readonly int[] Prizes =
         {
-            100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000,
-            64000, 125000, 250000, 500000, 1000000
+            100,
+            200, 
+            300, 
+            500, 
+            1000, 
+            2000, 
+            4000, 
+            8000, 
+            16000, 
+            32000,
+            64000, 
+            125000, 
+            250000, 
+            500000, 
+            1000000
         };
 
         /// <summary>The current level, starting at 0.</summary>
@@ -62,6 +75,16 @@
                     return 0;
                 }
             }
+        }
+
+        /// <summary>True at levels 1, 6 and 11, when the player picks a category.</summary>
+        public bool IsStageStart => Level % 5 == 0;
+
+        /// <summary>Gets the prize for any level (used to fill the money tree list).</summary>
+        /// <param name="level">The level, starting at 0.</param>
+        public int GetPrize(int level)
+        {
+            return Prizes[level];
         }
     }
 }
