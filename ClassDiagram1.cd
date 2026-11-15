@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WinFormsApp1.Caller">
+    <Position X="14" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAgAABAAA=</HashCode>
+      <FileName>Caller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.DataHandler">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAA=</HashCode>
+      <FileName>DataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.CategoryForm">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEAAAACAACAAAAACAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CategoryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.Form1">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACgAAIAAAACAAAACAAAAAAAAAGAABi0EQEQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.GameOverForm">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAIACAAAACAEAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>GameOverForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.MoneyTree">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIgAAAFQgAABAAAAAAAAAAAAABAAIAAAAAQAA=</HashCode>
+      <FileName>MoneyTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.Person">
+    <Position X="15.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.Player">
+    <Position X="17.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAEAAAAAAAAAAAAgAAAIAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.Program">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.Question">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAQAAAAAAAAAAAAAAAABAAQAACAAACAA=</HashCode>
+      <FileName>Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinFormsApp1.QuestionBank">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAACAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>QuestionBank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
