@@ -5,7 +5,10 @@
     /// </summary>
     public class QuestionBank
     {
+        /// <summary>The questions that have not been asked yet.</summary>
         private readonly List<Question> _questions;
+
+        /// <summary>Used to pick a random question.</summary>
         private readonly Random _random = new();
 
         /// <summary>
@@ -23,18 +26,31 @@
         /// <param name="category">The chosen category.</param>
         /// <param name="difficulty">The current difficulty (easy, medium or hard).</param>
         /// <returns>A question, or null if none are left.</returns>
-        public Question? GetRandomQuestion(string category, string difficulty)
+        public Question GetRandomQuestion(string category, string difficulty)
         {
-            List<Question> matches = _questions
-                .Where(q => q.Category == category && q.Difficulty == difficulty)
-                .ToList();
+            // Probably could have used LINQ here but I feel this is more readable.
 
+            // Collect every question that has the right category and difficulty.
+            List<Question> matches = new List<Question>();
+            foreach (Question question in _questions)
+            {
+                if (question.Category == category && question.Difficulty == difficulty)
+                {
+                    matches.Add(question);
+                }
+            }
+
+            // Check if there are no questions left.
             if (matches.Count == 0)
             {
                 return null;
             }
 
-            Question chosen = matches[_random.Next(matches.Count)];
+            // Pick one at random from the matches.
+            int randomIndex = _random.Next(matches.Count);
+            Question chosen = matches[randomIndex];
+
+            // Remove it from the main list so it is never asked twice.
             _questions.Remove(chosen);
             return chosen;
         }

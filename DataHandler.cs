@@ -17,10 +17,16 @@ namespace WinFormsApp1
         /// <returns>All questions in the file.</returns>
         public static List<Question> LoadQuestions(string filePath)
         {
+            // Check the file exists before trying to read it.
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException($"The questions file was not found: {filePath}");
+            }
+
             string json = File.ReadAllText(filePath);
             List<Question> questions = JsonSerializer.Deserialize<List<Question>>(json);
 
-            // Check that the questions file isn't empty (null)
+            // Check that the questions file isn't empty (null).
             if (questions == null)
             {
                 throw new Exception("The questions file is empty.");
