@@ -5,37 +5,43 @@ namespace WinFormsApp1
     /// </summary>
     public partial class Form1 : Form
     {
-        /// <summary>Prize for each level, lowest first. Levels 5 and 10 are the bank levels.</summary>
-        private static readonly int[] Prizes =
-        {
-            100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000,
-            64000, 125000, 250000, 500000, 1000000
-        };
-
         /// <summary>The categories exactly as they appear in the JSON file.</summary>
         private static readonly string[] Categories =
         {
-            "Sports", "Entertainment: Music", "Art", "General Knowledge", "Science: Computers", "History"
+            "Sports",
+            "Entertainment: Music",
+            "Art",
+            "General Knowledge",
+            "Science: Computers",
+            "History"
         };
 
-        /// <summary>Difficulty of each stage of the game: easy, then medium, then hard.</summary>
-        private static readonly string[] Difficulties = { "easy", "medium", "hard" };
-
-        /// <summary>How many questions each stage (difficulty) lasts.</summary>
-        private const int LevelsPerStage = 5;
-
+        /// <summary>The player taking part in the game.</summary>
         private readonly Player _player = new("Alex", 21, new List<string> { "Gaming", "Football" }, "Student");
+
+        /// <summary>Tracks the player's level, prizes and difficulty.</summary>
+        private readonly MoneyTree _moneyTree = new();
+
+        /// <summary>Used to shuffle the answers.</summary>
         private readonly Random _random = new();
+
+        /// <summary>The four answer buttons, grouped so they can be handled together.</summary>
         private readonly Button[] _answerButtons;
 
+        /// <summary>The questions that have not been asked yet.</summary>
         private QuestionBank _questionBank = null!;
+
+        /// <summary>The question currently on screen.</summary>
         private Question _currentQuestion = null!;
+
+        /// <summary>The category chosen for the current stage.</summary>
         private string _currentCategory = "";
-        private int _level;
-        private bool _acceptingAnswers;
+
+        /// <summary>Whether the player's last answer was correct.</summary>
+        private bool _answeredCorrectly;
 
         /// <summary>
-        /// Sets up the form and groups the answer buttons so they can be handled together.
+        /// Sets up the form and groups the answer buttons.
         /// </summary>
         public Form1()
         {
@@ -44,14 +50,15 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Fills the money tree once, then starts the first game.
+        /// Fills the money tree list once, then starts the first game.
         /// </summary>
         private void Form1_Load(object? sender, EventArgs e)
         {
-            for (int i = Prizes.Length - 1; i >= 0; i--)
+            // The list shows the highest prize at the top, so count down from the last level.
+            for (int i = _moneyTree.LevelCount - 1; i >= 0; i--)
             {
-                bool isBank = (i + 1) % LevelsPerStage == 0 && i < Prizes.Length - 1;
-                moneyTreeList.Items.Add($"{i + 1,2}   ${Prizes[i]:N0}{(isBank ? "  (bank)" : "")}");
+                bool isBank = i == 4 || i == 9;
+                moneyTreeList.Items.Add($"{i + 1,2}   ${_moneyTree.GetPrize(i):N0}{(isBank ? "  (bank)" : "")}");
             }
 
             playerLabel.Text = $"Player: {_player.Name}";
@@ -59,12 +66,12 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Resets everything for a new game and asks for the first category.
+        /// Resets everything for a new game.
         /// </summary>
         private void StartGame()
         {
             _questionBank = new QuestionBank(DataHandler.LoadQuestions(DataHandler.QuestionPath));
-            _level = 0;
+            _moneyTree.Reset();
 
             categoryCombo.Items.Clear();
             categoryCombo.Items.AddRange(Categories);
@@ -73,14 +80,17 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Moves to the next step: a category choice at the start of each stage, otherwise a question.
+        /// Updates the labels, then shows a category choice at the start of each stage, otherwise a question.
         /// </summary>
         private void ShowNextStep()
         {
-            UpdateLabels();
-            ClearAnswers();
+            levelLabel.Text = $"Level: {_moneyTree.Level + 1} of {_moneyTree.LevelCount}";
+            playingForLabel.Text = $"Playing for: ${_moneyTree.PlayingFor:N0}";
+            scoreLabel.Text = $"Score: ${_moneyTree.Score:N0}";
+            moneyTreeList.SelectedIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
+            walkAwayButton.Enabled = _moneyTree.Level > 0;
 
-            if (_level % LevelsPerStage == 0)
+            if (_moneyTree.IsStageStart)
             {
                 ShowCategoryPicker();
             }
@@ -91,45 +101,18 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Updates the level, prize, score labels and highlights the current spot on the money tree.
-        /// </summary>
-        private void UpdateLabels()
-        {
-            levelLabel.Text = $"Level: {_level + 1} of {Prizes.Length}";
-            playingForLabel.Text = $"Playing for: ${Prizes[_level]:N0}";
-            scoreLabel.Text = $"Score: ${GetScore():N0}";
-            moneyTreeList.SelectedIndex = Prizes.Length - 1 - _level;
-            walkAwayButton.Enabled = _level > 0;
-        }
-
-        /// <summary>
-        /// Works out what the player has won so far.
-        /// </summary>
-        /// <returns>The prize of the last question answered, or 0 at the start.</returns>
-        private int GetScore()
-        {
-            return _level == 0 ? 0 : Prizes[_level - 1];
-        }
-
-        /// <summary>
-        /// Resets the answer buttons to blank, default-coloured buttons.
-        /// </summary>
-        private void ClearAnswers()
-        {
-            foreach (Button button in _answerButtons)
-            {
-                button.Text = "";
-                button.UseVisualStyleBackColor = true;
-            }
-        }
-
-        /// <summary>
         /// Asks the player to pick a category. Categories already used are removed from the list.
         /// </summary>
         private void ShowCategoryPicker()
         {
-            _acceptingAnswers = false;
-            questionLabel.Text = $"Choose a category for the {Difficulties[_level / LevelsPerStage]} questions";
+            questionLabel.Text = $"Choose a category for the {_moneyTree.Difficulty} questions";
+
+            foreach (Button button in _answerButtons)
+            {
+                button.Text = "";
+                button.Enabled = false;
+            }
+
             categoryCombo.SelectedIndex = 0;
             categoryCombo.Enabled = true;
             chooseCategoryButton.Enabled = true;
@@ -153,7 +136,7 @@ namespace WinFormsApp1
         /// </summary>
         private void ShowQuestion()
         {
-            _currentQuestion = _questionBank.GetRandomQuestion(_currentCategory, Difficulties[_level / LevelsPerStage])!;
+            _currentQuestion = _questionBank.GetRandomQuestion(_currentCategory, _moneyTree.Difficulty)!;
             questionLabel.Text = _currentQuestion.Text;
 
             List<string> answers = _currentQuestion.IncorrectAnswers
@@ -164,47 +147,54 @@ namespace WinFormsApp1
             for (int i = 0; i < _answerButtons.Length; i++)
             {
                 _answerButtons[i].Text = answers[i];
+                _answerButtons[i].UseVisualStyleBackColor = true;
+                _answerButtons[i].Enabled = true;
             }
-
-            _acceptingAnswers = true;
         }
 
         /// <summary>
-        /// Handles a click on any answer button: shows green/red, then moves on or ends the game.
+        /// Handles a click on any answer button: shows green/red, then waits for the Continue button.
         /// </summary>
-        private async void AnswerButton_Click(object? sender, EventArgs e)
+        private void AnswerButton_Click(object? sender, EventArgs e)
         {
-            if (!_acceptingAnswers)
-            {
-                return;
-            }
-
-            _acceptingAnswers = false;
-            walkAwayButton.Enabled = false;
-
             Button clicked = (Button)sender!;
             Button correctButton = _answerButtons.First(button => button.Text == _currentQuestion.CorrectAnswer);
-            bool isCorrect = clicked == correctButton;
+            _answeredCorrectly = clicked == correctButton;
 
             // The correct answer always turns green; a wrong choice turns red.
             correctButton.BackColor = Color.LightGreen;
-            if (!isCorrect)
+            if (!_answeredCorrectly)
             {
                 clicked.BackColor = Color.Red;
             }
 
-            await Task.Delay(1500);
-
-            if (!isCorrect)
+            // Disabled buttons can't be clicked, so the player can't answer twice.
+            foreach (Button button in _answerButtons)
             {
-                EndGame(GetBankedPrize());
+                button.Enabled = false;
+            }
+
+            walkAwayButton.Enabled = false;
+            continueButton.Visible = true;
+        }
+
+        /// <summary>
+        /// Moves on after an answer: ends the game if it was wrong or the last level, otherwise goes up a level.
+        /// </summary>
+        private void ContinueButton_Click(object? sender, EventArgs e)
+        {
+            continueButton.Visible = false;
+
+            if (!_answeredCorrectly)
+            {
+                EndGame(_moneyTree.BankedPrize);
                 return;
             }
 
-            _level++;
-            if (_level == Prizes.Length)
+            _moneyTree.Advance();
+            if (_moneyTree.Level == _moneyTree.LevelCount)
             {
-                EndGame(Prizes[^1]);
+                EndGame(_moneyTree.Score);
             }
             else
             {
@@ -213,20 +203,11 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// After a wrong answer the player keeps the last bank level they passed.
-        /// </summary>
-        /// <returns>0, the first bank prize or the second bank prize.</returns>
-        private int GetBankedPrize()
-        {
-            return _level < LevelsPerStage ? 0 : Prizes[_level / LevelsPerStage * LevelsPerStage - 1];
-        }
-
-        /// <summary>
         /// Lets the player leave with the money they have won so far.
         /// </summary>
         private void WalkAwayButton_Click(object? sender, EventArgs e)
         {
-            EndGame(GetScore());
+            EndGame(_moneyTree.Score);
         }
 
         /// <summary>
@@ -235,8 +216,6 @@ namespace WinFormsApp1
         /// <param name="finalScore">The amount the player leaves with.</param>
         private void EndGame(int finalScore)
         {
-            _acceptingAnswers = false;
-
             using GameOverForm gameOver = new(finalScore);
             if (gameOver.ShowDialog(this) == DialogResult.Retry)
             {
@@ -253,7 +232,7 @@ namespace WinFormsApp1
         /// </summary>
         private void MoneyTree_SelectedIndexChanged(object? sender, EventArgs e)
         {
-            moneyTreeList.SelectedIndex = Prizes.Length - 1 - _level;
+            moneyTreeList.SelectedIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
         }
     }
 }

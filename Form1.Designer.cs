@@ -47,6 +47,7 @@
             audienceButton = new Button();
             phoneButton = new Button();
             changeQuestionButton = new Button();
+            continueButton = new Button();
             SuspendLayout();
             // 
             // moneyTreeList
@@ -232,11 +233,23 @@
             changeQuestionButton.Text = "Change the Question";
             changeQuestionButton.UseVisualStyleBackColor = true;
             // 
+            // continueButton
+            // 
+            continueButton.Location = new Point(190, 585);
+            continueButton.Name = "continueButton";
+            continueButton.Size = new Size(150, 40);
+            continueButton.TabIndex = 19;
+            continueButton.Text = "Continue";
+            continueButton.UseVisualStyleBackColor = true;
+            continueButton.Visible = false;
+            continueButton.Click += ContinueButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(984, 661);
+            Controls.Add(continueButton);
             Controls.Add(changeQuestionButton);
             Controls.Add(phoneButton);
             Controls.Add(audienceButton);
@@ -284,5 +297,6 @@
         private Button audienceButton;
         private Button phoneButton;
         private Button changeQuestionButton;
+        private Button continueButton;
     }
 }
