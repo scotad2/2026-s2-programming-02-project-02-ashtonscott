@@ -265,7 +265,7 @@ namespace WinFormsApp1
             // Determine when the player tries to tamper with my money tree.
             if (moneyTreeList.SelectedIndex != correctIndex)
             {
-                MessageBox.Show("Don't touch my damn money tree!\n>:(", "Stop!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Don't touch the money tree!\n\n>:(", "Stop!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 moneyTreeList.SelectedIndex = correctIndex;
             }
         }
