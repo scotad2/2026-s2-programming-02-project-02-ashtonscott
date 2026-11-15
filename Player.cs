@@ -5,11 +5,9 @@
     /// </summary>
     public class Player : Person
     {
-        /// <summary>The player's age.</summary>
-        public int Age { get; set; }
+        private int _age;
 
-        /// <summary>The player's hobbies.</summary>
-        public List<string> Hobbies { get; set; }
+        private List<string> _hobbies;
 
         /// <summary>
         /// Creates a player.
@@ -20,8 +18,14 @@
         /// <param name="job">The player's job.</param>
         public Player(string name, int age, List<string> hobbies, string job) : base(name, job)
         {
-            Age = age;
-            Hobbies = hobbies;
+            _age = age;
+            _hobbies = hobbies;
         }
+
+        /// <summary>The player's age.</summary>
+        public int Age => _age;
+
+        /// <summary>The player's hobbies.</summary>
+        public List<string> Hobbies => _hobbies;
     }
 }

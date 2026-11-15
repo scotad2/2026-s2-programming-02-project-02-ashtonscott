@@ -9,19 +9,19 @@
         private static readonly int[] Prizes =
         {
             100,
-            200, 
-            300, 
-            500, 
-            1000, 
-            2000, 
-            4000, 
-            8000, 
-            16000, 
+            200,
+            300,
+            500,
+            1000,
+            2000,
+            4000,
+            8000,
+            16000,
             32000,
-            64000, 
-            125000, 
-            250000, 
-            500000, 
+            64000,
+            125000,
+            250000,
+            500000,
             1000000
         };
 
@@ -78,7 +78,20 @@
         }
 
         /// <summary>True at levels 1, 6 and 11, when the player picks a category.</summary>
-        public bool IsStageStart => Level % 5 == 0;
+        public bool IsStageStart
+        {
+            get
+            {
+                if (Level == 0 || Level == 5 || Level == 10)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
         /// <summary>Moves up one level.</summary>
         public void Advance()

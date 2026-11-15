@@ -5,11 +5,9 @@
     /// </summary>
     public class Caller : Person
     {
-        /// <summary>Categories the caller knows well.</summary>
-        public List<string> Strengths { get; set; }
+        private List<string> _strengths;
 
-        /// <summary>Categories the caller knows poorly.</summary>
-        public List<string> Weaknesses { get; set; }
+        private List<string> _weaknesses;
 
         /// <summary>
         /// Creates a caller.
@@ -20,8 +18,14 @@
         /// <param name="weaknesses">Categories the caller knows poorly.</param>
         public Caller(string name, string job, List<string> strengths, List<string> weaknesses) : base(name, job)
         {
-            Strengths = strengths;
-            Weaknesses = weaknesses;
+            _strengths = strengths;
+            _weaknesses = weaknesses;
         }
+
+        /// <summary>Categories the caller knows well.</summary>
+        public List<string> Strengths => _strengths;
+
+        /// <summary>Categories the caller knows poorly.</summary>
+        public List<string> Weaknesses => _weaknesses;
     }
 }

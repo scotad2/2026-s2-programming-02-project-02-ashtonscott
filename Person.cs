@@ -5,11 +5,9 @@
     /// </summary>
     public abstract class Person
     {
-        /// <summary>The person's name.</summary>
-        public string Name { get; set; }
+        private string _name;
 
-        /// <summary>The person's job.</summary>
-        public string Job { get; set; }
+        private string _job;
 
         /// <summary>
         /// Creates a person.
@@ -18,8 +16,14 @@
         /// <param name="job">The person's job.</param>
         protected Person(string name, string job)
         {
-            Name = name;
-            Job = job;
+            _name = name;
+            _job = job;
         }
+
+        /// <summary>The person's name.</summary>
+        public string Name => _name;
+
+        /// <summary>The person's job.</summary>
+        public string Job => _job;
     }
 }

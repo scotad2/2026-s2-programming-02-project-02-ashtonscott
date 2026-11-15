@@ -9,26 +9,26 @@ namespace WinFormsApp1
     {
         /// <summary>The type of question, e.g. "multiple".</summary>
         [JsonPropertyName("type")]
-        public string Type { get; set; } = "";
+        public string Type { get; set; }
 
         /// <summary>The difficulty: easy, medium or hard.</summary>
         [JsonPropertyName("difficulty")]
-        public string Difficulty { get; set; } = "";
+        public string Difficulty { get; set; }
 
         /// <summary>The topic of the question.</summary>
         [JsonPropertyName("category")]
-        public string Category { get; set; } = "";
+        public string Category { get; set; }
 
         /// <summary>The question text.</summary>
         [JsonPropertyName("question")]
-        public string Text { get; set; } = "";
+        public string Text { get; set; }
 
         /// <summary>The correct answer.</summary>
         [JsonPropertyName("correct_answer")]
-        public string CorrectAnswer { get; set; } = "";
+        public string CorrectAnswer { get; set; }
 
         /// <summary>The incorrect answers.</summary>
         [JsonPropertyName("incorrect_answers")]
-        public List<string> IncorrectAnswers { get; set; } = new();
+        public List<string> IncorrectAnswers { get; set; }
     }
 }
