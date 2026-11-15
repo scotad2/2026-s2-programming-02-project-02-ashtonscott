@@ -17,7 +17,7 @@ namespace WinFormsApp1
         };
 
         /// <summary>The player taking part in the game.</summary>
-        private readonly Player _player = new("Alex", 21, new List<string> { "Gaming", "Football" }, "Student");
+        private readonly Player _player = new("Ashton", 21, new List<string> { "Programming" }, "Student");
 
         /// <summary>Tracks the player's level, prizes and difficulty.</summary>
         private readonly MoneyTree _moneyTree = new();
@@ -111,7 +111,6 @@ namespace WinFormsApp1
             playingForLabel.Text = $"Playing for: ${_moneyTree.PlayingFor:N0}";
             scoreLabel.Text = $"Score: ${_moneyTree.Score:N0}";
             moneyTreeList.SelectedIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
-            walkAwayButton.Enabled = _moneyTree.Level > 0;
 
             if (_moneyTree.IsStageStart)
             {
@@ -217,6 +216,14 @@ namespace WinFormsApp1
         /// </summary>
         private void WalkAwayButton_Click(object? sender, EventArgs e)
         {
+            // Just in case the player ever decides to walk away after having done nothing...
+            if (_moneyTree.Score == 0)
+            {
+                MessageBox.Show("Well that was a waste of time...", "Why did you do that?", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                EndGame(_moneyTree.Score);
+            }
+
+            // End game and display score.
             EndGame(_moneyTree.Score);
         }
 
@@ -229,7 +236,7 @@ namespace WinFormsApp1
             using GameOverForm gameOver = new(finalScore);
             if (gameOver.ShowDialog(this) == DialogResult.Retry)
             {
-                StartGame();
+                Close();
             }
             else
             {
