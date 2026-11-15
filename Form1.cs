@@ -111,6 +111,7 @@ namespace WinFormsApp1
             playingForLabel.Text = $"Playing for: ${_moneyTree.PlayingFor:N0}";
             scoreLabel.Text = $"Score: ${_moneyTree.Score:N0}";
             moneyTreeList.SelectedIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
+            walkAwayButton.Enabled = _moneyTree.Level > 0;
 
             if (_moneyTree.IsStageStart)
             {
@@ -233,10 +234,12 @@ namespace WinFormsApp1
         /// <param name="finalScore">The amount the player leaves with.</param>
         private void EndGame(int finalScore)
         {
-            using GameOverForm gameOver = new(finalScore);
-            if (gameOver.ShowDialog(this) == DialogResult.Retry)
+            GameOverForm gameOver = new GameOverForm(finalScore);
+            DialogResult result = gameOver.ShowDialog(this);
+
+            if (result == DialogResult.Retry)
             {
-                Close();
+                StartGame();
             }
             else
             {
