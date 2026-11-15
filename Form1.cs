@@ -107,11 +107,19 @@ namespace WinFormsApp1
         /// </summary>
         private void ShowNextStep()
         {
+            // Display current level.
             levelLabel.Text = $"Level: {_moneyTree.Level + 1} of {_moneyTree.LevelCount}";
+
+            // Display the amount of money the player is playing for.
             playingForLabel.Text = $"Playing for: ${_moneyTree.PlayingFor:N0}";
+
+            // Display player score.
             scoreLabel.Text = $"Score: ${_moneyTree.Score:N0}";
+
+            // Indicate where the player is on the money tree by selecting index of current level
             moneyTreeList.SelectedIndex = _moneyTree.LevelCount - 1 - _moneyTree.Level;
-            walkAwayButton.Enabled = _moneyTree.Level > 0;
+
+            walkAwayButton.Enabled = true;
 
             if (_moneyTree.IsStageStart)
             {
