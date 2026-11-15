@@ -43,5 +43,25 @@
                 }
             }
         }
+
+        /// <summary>What the player keeps after a wrong answer: the last bank level they passed.</summary>
+        public int BankedPrize
+        {
+            get
+            {
+                if (Level >= 10)
+                {
+                    return 32000;
+                }
+                else if (Level >= 5)
+                {
+                    return 5000;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
     }
 }
