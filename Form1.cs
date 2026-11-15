@@ -28,6 +28,9 @@ namespace WinFormsApp1
         /// <summary>The four answer buttons, grouped so they can be handled together.</summary>
         private readonly Button[] _answerButtons;
 
+        /// <summary>The categories the player has not chosen yet in this game.</summary>
+        private List<string> _availableCategories = new();
+
         /// <summary>The questions that have not been asked yet.</summary>
         private QuestionBank _questionBank = null!;
 
@@ -50,9 +53,9 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Fills the money tree list once, then starts the first game.
+        /// Fills the money tree list once, then starts the first game once the form is on screen.
         /// </summary>
-        private void Form1_Load(object? sender, EventArgs e)
+        private void Form1_Shown(object? sender, EventArgs e)
         {
             // The list shows the highest prize at the top, so count down from the last level.
             for (int i = _moneyTree.LevelCount - 1; i >= 0; i--)
@@ -71,10 +74,8 @@ namespace WinFormsApp1
         private void StartGame()
         {
             _questionBank = new QuestionBank(DataHandler.LoadQuestions(DataHandler.QuestionPath));
+            _availableCategories = new List<string>(Categories);
             _moneyTree.Reset();
-
-            categoryCombo.Items.Clear();
-            categoryCombo.Items.AddRange(Categories);
 
             ShowNextStep();
         }
@@ -92,20 +93,18 @@ namespace WinFormsApp1
 
             if (_moneyTree.IsStageStart)
             {
-                ShowCategoryPicker();
+                ChooseCategory();
             }
-            else
-            {
-                ShowQuestion();
-            }
+
+            ShowQuestion();
         }
 
         /// <summary>
-        /// Asks the player to pick a category. Categories already used are removed from the list.
+        /// Opens the category form, then removes the chosen category so it can't be picked again.
         /// </summary>
-        private void ShowCategoryPicker()
+        private void ChooseCategory()
         {
-            questionLabel.Text = $"Choose a category for the {_moneyTree.Difficulty} questions";
+            questionLabel.Text = "Choosing a category...";
 
             foreach (Button button in _answerButtons)
             {
@@ -113,22 +112,11 @@ namespace WinFormsApp1
                 button.Enabled = false;
             }
 
-            categoryCombo.SelectedIndex = 0;
-            categoryCombo.Enabled = true;
-            chooseCategoryButton.Enabled = true;
-        }
+            using CategoryForm categoryForm = new(_availableCategories, _moneyTree.Difficulty);
+            categoryForm.ShowDialog(this);
 
-        /// <summary>
-        /// Locks in the chosen category, removes it from the list and shows the first question.
-        /// </summary>
-        private void ChooseCategoryButton_Click(object? sender, EventArgs e)
-        {
-            _currentCategory = categoryCombo.Text;
-            categoryCombo.Items.Remove(_currentCategory);
-            categoryCombo.Enabled = false;
-            chooseCategoryButton.Enabled = false;
-
-            ShowQuestion();
+            _currentCategory = categoryForm.SelectedCategory;
+            _availableCategories.Remove(_currentCategory);
         }
 
         /// <summary>

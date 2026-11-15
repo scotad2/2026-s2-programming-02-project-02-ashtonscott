@@ -40,8 +40,6 @@
             playingForLabel = new Label();
             scoreLabel = new Label();
             friendLabel = new Label();
-            categoryCombo = new ComboBox();
-            chooseCategoryButton = new Button();
             walkAwayButton = new Button();
             fiftyFiftyButton = new Button();
             audienceButton = new Button();
@@ -164,25 +162,6 @@
             friendLabel.TabIndex = 11;
             friendLabel.Text = "Phone a Friend:";
             // 
-            // categoryCombo
-            // 
-            categoryCombo.DropDownStyle = ComboBoxStyle.DropDownList;
-            categoryCombo.FormattingEnabled = true;
-            categoryCombo.Location = new Point(30, 100);
-            categoryCombo.Name = "categoryCombo";
-            categoryCombo.Size = new Size(250, 23);
-            categoryCombo.TabIndex = 12;
-            // 
-            // chooseCategoryButton
-            // 
-            chooseCategoryButton.Location = new Point(290, 99);
-            chooseCategoryButton.Name = "chooseCategoryButton";
-            chooseCategoryButton.Size = new Size(150, 25);
-            chooseCategoryButton.TabIndex = 13;
-            chooseCategoryButton.Text = "Choose Category";
-            chooseCategoryButton.UseVisualStyleBackColor = true;
-            chooseCategoryButton.Click += ChooseCategoryButton_Click;
-            // 
             // walkAwayButton
             // 
             walkAwayButton.Location = new Point(30, 585);
@@ -255,8 +234,6 @@
             Controls.Add(audienceButton);
             Controls.Add(fiftyFiftyButton);
             Controls.Add(walkAwayButton);
-            Controls.Add(chooseCategoryButton);
-            Controls.Add(categoryCombo);
             Controls.Add(scoreLabel);
             Controls.Add(friendLabel);
             Controls.Add(playingForLabel);
@@ -271,7 +248,7 @@
             Controls.Add(moneyTreeList);
             Name = "Form1";
             Text = "Who Wants To Be A Millionaire";
-            Load += Form1_Load;
+            Shown += Form1_Shown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,8 +267,6 @@
         private Label playingForLabel;
         private Label scoreLabel;
         private Label friendLabel;
-        private ComboBox categoryCombo;
-        private Button chooseCategoryButton;
         private Button walkAwayButton;
         private Button fiftyFiftyButton;
         private Button audienceButton;
