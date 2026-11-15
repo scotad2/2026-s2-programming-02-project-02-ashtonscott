@@ -134,17 +134,19 @@ namespace WinFormsApp1
         /// </summary>
         private void ChooseCategory()
         {
+            // Blank the question and answers while the player chooses.
             questionLabel.Text = "Choosing a category...";
-
             foreach (Button button in _answerButtons)
             {
                 button.Text = "";
                 button.Enabled = false;
             }
 
-            using CategoryForm categoryForm = new(_availableCategories, _moneyTree.Difficulty);
+            // Show the category form and wait until the player has picked one.
+            CategoryForm categoryForm = new CategoryForm(_availableCategories, _moneyTree.Difficulty);
             categoryForm.ShowDialog(this);
 
+            // Remember the choice and take it off the list so it can't be picked again.
             _currentCategory = categoryForm.SelectedCategory;
             _availableCategories.Remove(_currentCategory);
         }
