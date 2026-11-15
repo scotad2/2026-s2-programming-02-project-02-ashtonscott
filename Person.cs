@@ -14,8 +14,19 @@
         /// </summary>
         /// <param name="name">The person's name.</param>
         /// <param name="job">The person's job.</param>
+        /// <exception cref="Exception">Thrown if the name or job is empty.</exception>
         protected Person(string name, string job)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new Exception("The name cannot be empty.");
+            }
+
+            if (string.IsNullOrWhiteSpace(job))
+            {
+                throw new Exception("The job cannot be empty.");
+            }
+
             _name = name;
             _job = job;
         }
