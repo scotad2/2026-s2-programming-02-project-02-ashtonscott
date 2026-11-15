@@ -21,7 +21,7 @@
         }
 
         /// <summary>
-        /// Picks a random question for the category and difficulty, then removes it so it can't be asked again.
+        /// Picks a random question for the category and difficulty then removes it so it can't be asked again.
         /// </summary>
         /// <param name="category">The chosen category.</param>
         /// <param name="difficulty">The current difficulty (easy, medium or hard).</param>

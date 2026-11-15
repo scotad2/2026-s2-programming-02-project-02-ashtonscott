@@ -1,11 +1,11 @@
 ﻿namespace WinFormsApp1
 {
     /// <summary>
-    /// The prize ladder: keeps track of the current level and what the player has won.
+    /// The prize ladder that keeps track of the current level and what the player has won.
     /// </summary>
     public class MoneyTree
     {
-        /// <summary>Prize for each level, lowest first.</summary>
+        /// <summary>Prize for each level.</summary>
         private static readonly int[] Prizes =
         {
             100,
@@ -70,7 +70,7 @@
             }
         }
 
-        /// <summary>What the player keeps after a wrong answer: the last bank level they passed.</summary>
+        /// <summary>What the player keeps after a wrong answer (the last bank level they passed).</summary>
         public int BankedPrize
         {
             get

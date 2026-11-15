@@ -1,7 +1,7 @@
 namespace WinFormsApp1
 {
     /// <summary>
-    /// The main game form: shows the question, answers, score and money tree and runs the game.
+    /// The main game form.
     /// </summary>
     public partial class Form1 : Form
     {
@@ -25,7 +25,7 @@ namespace WinFormsApp1
         /// <summary>Used to shuffle the answers.</summary>
         private readonly Random _random = new();
 
-        /// <summary>The four answer buttons, grouped so they can be handled together.</summary>
+        /// <summary>The four answer buttons, I've them grouped so they can be handled together.</summary>
         private readonly Button[] _answerButtons;
 
         /// <summary>The categories the player has not chosen yet in this game.</summary>
@@ -53,7 +53,7 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Fills the money tree list, then starts the first game once the form is on screen.
+        /// Fills the money tree list then starts the first game once the form is on screen.
         /// </summary>
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -103,7 +103,7 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Updates the labels, then shows a category choice at the start of each stage, otherwise a question.
+        /// Updates the labels then shows a category choice at the start of each stage, otherwise a question.
         /// </summary>
         private void ShowNextStep()
         {
@@ -130,7 +130,7 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Opens the category form, then removes the chosen category so it can't be picked again.
+        /// Opens the category form then removes the chosen category so it can't be picked again.
         /// </summary>
         private void ChooseCategory()
         {
@@ -205,19 +205,24 @@ namespace WinFormsApp1
         {
             continueButton.Visible = false;
 
+            // Player answered incorrect and so game ends.
             if (!_answeredCorrectly)
             {
                 EndGame(_moneyTree.BankedPrize);
                 return;
             }
 
+            // Player answered correctly so advances a level.
             _moneyTree.Advance();
+
+            // Determine if player has won yet.
             if (_moneyTree.Level == _moneyTree.LevelCount)
             {
                 EndGame(_moneyTree.Score);
             }
             else
             {
+                // Player hasn't won yet, display next step.
                 ShowNextStep();
             }
         }

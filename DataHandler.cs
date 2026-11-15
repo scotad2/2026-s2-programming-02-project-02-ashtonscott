@@ -8,6 +8,9 @@ namespace WinFormsApp1
     /// </summary>
     public static class DataHandler
     {
+        /// <summary>
+        /// Path to the JSON file with all the questions.
+        /// </summary>
         private const string QuestionPath = @"../../../data/all-questions.json";
 
         /// <summary>

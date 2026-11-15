@@ -1,7 +1,7 @@
 ﻿namespace WinFormsApp1
 {
     /// <summary>
-    /// A small form that asks the player to choose a category. It has no close button, so a choice must be made.
+    /// A small form that asks the player to choose a category.
     /// </summary>
     public partial class CategoryForm : Form
     {

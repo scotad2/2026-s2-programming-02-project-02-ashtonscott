@@ -8,10 +8,11 @@ namespace WinFormsApp1
     public class Question
     {
         /// <summary>The type of question, e.g. "multiple".</summary>
+        /// <remarks>I don't think there even is anything other than "multiple" in the JSON file...</remarks>
         [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        /// <summary>The difficulty: easy, medium or hard.</summary>
+        /// <summary>The difficulty, easy, medium or hard.</summary>
         [JsonPropertyName("difficulty")]
         public string Difficulty { get; set; }
 
