@@ -156,7 +156,7 @@
             // friendLabel
             // 
             friendLabel.AutoSize = true;
-            friendLabel.Location = new Point(218, 24);
+            friendLabel.Location = new Point(450, 24);
             friendLabel.Name = "friendLabel";
             friendLabel.Size = new Size(89, 15);
             friendLabel.TabIndex = 11;
