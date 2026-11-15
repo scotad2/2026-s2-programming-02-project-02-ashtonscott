@@ -51,7 +51,7 @@ namespace WinFormsApp1
             for (int i = Prizes.Length - 1; i >= 0; i--)
             {
                 bool isBank = (i + 1) % LevelsPerStage == 0 && i < Prizes.Length - 1;
-                moneyTree.Items.Add($"{i + 1,2}   ${Prizes[i]:N0}{(isBank ? "  (bank)" : "")}");
+                moneyTreeList.Items.Add($"{i + 1,2}   ${Prizes[i]:N0}{(isBank ? "  (bank)" : "")}");
             }
 
             playerLabel.Text = $"Player: {_player.Name}";
@@ -98,7 +98,7 @@ namespace WinFormsApp1
             levelLabel.Text = $"Level: {_level + 1} of {Prizes.Length}";
             playingForLabel.Text = $"Playing for: ${Prizes[_level]:N0}";
             scoreLabel.Text = $"Score: ${GetScore():N0}";
-            moneyTree.SelectedIndex = Prizes.Length - 1 - _level;
+            moneyTreeList.SelectedIndex = Prizes.Length - 1 - _level;
             walkAwayButton.Enabled = _level > 0;
         }
 
@@ -253,7 +253,7 @@ namespace WinFormsApp1
         /// </summary>
         private void MoneyTree_SelectedIndexChanged(object? sender, EventArgs e)
         {
-            moneyTree.SelectedIndex = Prizes.Length - 1 - _level;
+            moneyTreeList.SelectedIndex = Prizes.Length - 1 - _level;
         }
     }
 }

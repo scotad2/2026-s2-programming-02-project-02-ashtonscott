@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            moneyTree = new ListBox();
+            moneyTreeList = new ListBox();
             moneyTreeTitle = new Label();
             questionLabel = new Label();
             answerAButton = new Button();
@@ -49,15 +49,15 @@
             changeQuestionButton = new Button();
             SuspendLayout();
             // 
-            // moneyTree
+            // moneyTreeList
             // 
-            moneyTree.FormattingEnabled = true;
-            moneyTree.ItemHeight = 15;
-            moneyTree.Location = new Point(722, 150);
-            moneyTree.Name = "moneyTree";
-            moneyTree.Size = new Size(250, 499);
-            moneyTree.TabIndex = 0;
-            moneyTree.SelectedIndexChanged += MoneyTree_SelectedIndexChanged;
+            moneyTreeList.FormattingEnabled = true;
+            moneyTreeList.ItemHeight = 15;
+            moneyTreeList.Location = new Point(722, 150);
+            moneyTreeList.Name = "moneyTreeList";
+            moneyTreeList.Size = new Size(250, 499);
+            moneyTreeList.TabIndex = 0;
+            moneyTreeList.SelectedIndexChanged += MoneyTree_SelectedIndexChanged;
             // 
             // moneyTreeTitle
             // 
@@ -255,7 +255,7 @@
             Controls.Add(answerAButton);
             Controls.Add(questionLabel);
             Controls.Add(moneyTreeTitle);
-            Controls.Add(moneyTree);
+            Controls.Add(moneyTreeList);
             Name = "Form1";
             Text = "Who Wants To Be A Millionaire";
             Load += Form1_Load;
@@ -265,7 +265,7 @@
 
         #endregion
 
-        private ListBox moneyTree;
+        private ListBox moneyTreeList;
         private Label moneyTreeTitle;
         private Label questionLabel;
         private Button answerAButton;
