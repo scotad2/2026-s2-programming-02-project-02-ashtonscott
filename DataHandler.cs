@@ -8,22 +8,22 @@ namespace WinFormsApp1
     /// </summary>
     public static class DataHandler
     {
-        public const string QuestionPath = @"../../../data/all-questions.json";
+        private const string QuestionPath = @"../../../data/all-questions.json";
 
         /// <summary>
         /// Reads the JSON file and decodes any HTML entities (e.g. &amp;quot;) in the text.
         /// </summary>
         /// <param name="filePath">Path to the JSON file.</param>
         /// <returns>All questions in the file.</returns>
-        public static List<Question> LoadQuestions(string filePath)
+        public static List<Question> LoadQuestions()
         {
             // Check the file exists before trying to read it.
-            if (!File.Exists(filePath))
+            if (!File.Exists(QuestionPath))
             {
-                throw new FileNotFoundException($"The questions file was not found: {filePath}");
+                throw new FileNotFoundException($"The questions file was not found: {QuestionPath}");
             }
 
-            string json = File.ReadAllText(filePath);
+            string json = File.ReadAllText(QuestionPath);
             List<Question> questions = JsonSerializer.Deserialize<List<Question>>(json);
 
             // Check that the questions file isn't empty (null).

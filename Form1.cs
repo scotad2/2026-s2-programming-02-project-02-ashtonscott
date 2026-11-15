@@ -85,7 +85,17 @@ namespace WinFormsApp1
         /// </summary>
         private void StartGame()
         {
-            _questionBank = new QuestionBank(DataHandler.LoadQuestions(DataHandler.QuestionPath));
+            try
+            {
+                _questionBank = new QuestionBank(DataHandler.LoadQuestions());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Could not load the questions");
+                Close();
+                return;
+            }
+
             _availableCategories = new List<string>(Categories);
             _moneyTree.Reset();
 
