@@ -76,7 +76,7 @@ namespace WinFormsApp1
                 " 1.   $100"
             ]);
 
-            playerLabel.Text = $"Player: {_player.Name}";
+            playerLabel.Text = $"Player: {_player.Name}, {_player.Age} ({_player.Job}), enjoys {string.Join(", ", _player.Hobbies)}";
             StartGame();
         }
 

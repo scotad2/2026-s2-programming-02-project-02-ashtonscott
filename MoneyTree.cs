@@ -35,7 +35,20 @@
         public int PlayingFor => Prizes[Level];
 
         /// <summary>What the player has won so far.</summary>
-        public int Score => Level == 0 ? 0 : Prizes[Level - 1];
+        public int Score
+        {
+            get
+            {
+                if (Level == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return Prizes[Level - 1];
+                }
+            }
+        }
 
         /// <summary>The question difficulty for the current level.</summary>
         public string Difficulty
