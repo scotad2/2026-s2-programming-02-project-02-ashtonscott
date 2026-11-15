@@ -86,5 +86,17 @@
         {
             return Prizes[level];
         }
+
+        /// <summary>Moves up one level.</summary>
+        public void Advance()
+        {
+            Level++;
+        }
+
+        /// <summary>Goes back to the first level.</summary>
+        public void Reset()
+        {
+            Level = 0;
+        }
     }
 }
